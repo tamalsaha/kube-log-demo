@@ -10,6 +10,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/clientcmd"
+	"github.com/golang/glog"
 )
 
 func NewRootCmd() *cobra.Command {
@@ -56,6 +57,9 @@ func NewCmdCheck() *cobra.Command {
 			for _, node := range nodes.Items {
 				fmt.Println("log.Println_____")
 				log.Println(node.Name)
+
+				fmt.Println("glog.Infoln_____")
+				glog.Infoln(node.Name)
 			}
 		},
 	}
