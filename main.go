@@ -58,8 +58,35 @@ func NewCmdCheck() *cobra.Command {
 				fmt.Println("log.Println_____")
 				log.Println(node.Name)
 
+				// ---------------------------------
+
 				fmt.Println("glog.Infoln_____")
 				glog.Infoln(node.Name)
+
+				fmt.Println("glog.Warningln_____")
+				glog.Warningln(node.Name)
+
+				fmt.Println("glog.Errorln_____")
+				glog.Errorln(node.Name)
+
+				// ---------------------------------
+
+				fmt.Println("glog.V(0).Infoln_____")
+				glog.V(0).Infoln(node.Name)
+
+				fmt.Println("glog.V(1).Infoln_____")
+				glog.V(1).Infoln(node.Name)
+
+				fmt.Println("glog.V(2).Infoln_____")
+				glog.V(2).Infoln(node.Name)
+
+				fmt.Println("glog.V(3).Infoln_____")
+				glog.V(3).Infoln(node.Name)
+
+				fmt.Println("glog.V(4).Infoln_____")
+				glog.V(4).Infoln(node.Name)
+
+				break
 			}
 		},
 	}
